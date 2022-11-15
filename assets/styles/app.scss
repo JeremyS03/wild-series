@@ -1,0 +1,15 @@
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+
+
+body {
+    background-color: blue;
+}
+
+
+// customize some Bootstrap variables
+$primary: #0074d9;
+$danger: #ff4136;
+
+// the ~ allows you to reference things in node_modules
+
