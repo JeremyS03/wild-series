@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}All programs{% endblock %}
+{% block title %}Catégorie #{{ category.name }}{% endblock %}
 
 {% block body %}
-    <h1>Toutes les séries de la table program : </h1>
+    <div class="media">
     {% for program in programs %}
         <div>
             <h2>{{ loop.index }} / {{ program.title }} - Catégorie : {{ program.category.name }}</h2>
@@ -13,8 +13,9 @@
     {% else %}
         Aucune série trouvée.
     {% endfor %}
+    </div>
 
-    <a href="{{ path('app_index') }}">
-        Retour à l'accueil
+    <a href="{{ path('category_index') }}">
+        Retour à la liste des category
     </a>
 {% endblock %}
